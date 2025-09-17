@@ -5,7 +5,7 @@ package main
 import "fmt"
 
 func main() {
-	var a, b float64
+	var a, b int
 
 	fmt.Print("Введите первое число: ")
 	fmt.Scan(&a)
@@ -14,13 +14,13 @@ func main() {
 	fmt.Scan(&b)
 
 	fmt.Printf("\nРезультаты операций:\n")
-	fmt.Printf("%g + %g = %g\n", a, b, a+b)
-	fmt.Printf("%g - %g = %g\n", a, b, a-b)
-	fmt.Printf("%g * %g = %g\n", a, b, a*b)
+	fmt.Printf("%d + %d = %d\n", a, b, a+b)
+	fmt.Printf("%d - %d = %d\n", a, b, a-b)
+	fmt.Printf("%d * %d = %d\n", a, b, a*b)
 
 	if b != 0 {
-		fmt.Printf("%g / %g = %g\n", a, b, a/b)
-		fmt.Printf("%d %% %d = %d\n", int(a), int(b), int(a)%int(b))
+		fmt.Printf("%d / %d = %g\n", a, b, float64(a)/float64(b))
+		fmt.Printf("%d %% %d = %d\n", a, b, a%b)
 	} else {
 		fmt.Println("Деление на ноль невозможно!")
 	}
